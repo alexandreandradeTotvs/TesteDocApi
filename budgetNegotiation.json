@@ -112,118 +112,118 @@
 						"$ref": "#/definitions/QuotationItemType",
 						"type": "object"
 					}					
-				},
-				"QuotationItemType": {
-					"type": "object",
-					"properties": {
-						"_expandables": {
-							"type": "array",
-							"description": "Expandable property/field list",
-							"items": {
-								"type": "string"
-							}
-						},
-						"CompanyId": {
-							"description": "Código da Empresa",
-							"type": "string",
-							"x-totvs": [								
-								{
-									"product": "RM",
-									"field": "TCCOTACAO.CODCOLIGADA",
-									"required": true,
-									"type": "integer",									
-									"note": "Código da coligada",
-									"available": true
-								}
-							]
-						},
-						"QuotationCode": {
-							"description": "Código da cotação",
-							"type": "string",
-							"x-totvs": [
-								{
-									"product": "RM",
-									"field": "TCCOTACAO.CODCOTACAO",
-									"required": true,
-									"type": "string",									
-									"note": "Código da cotação",
-									"available": true
-								}
-							]
-						},
-						"QuotationDate": {
-							"description": "Data da cotação",
-							"type": "date",
-							"x-totvs": [
-								{
-									"product": "RM",
-									"field": "TCCOTACAO.DATCOTACAO",
-									"required": true,
-									"type": "date",									
-									"note": "Data da cotacao",
-									"available": true
-								}
-							]
-						},
-						"QuotationStatus": {
-							"description": "Status da cotação",
-							"type": "string",							
-							"x-totvs": [
-								{
-									"product": "RM",
-									"available": true,
-									"required": true,
-									"field": "TCCOTACAO.STSCOTACAO",
-									"type": "string",									
-									"note": "Status da cotação"
-								}
-							]
-						},
-						"DeadlineDate": {
-							"description": "Data Limite de resposta da cotação",
-							"type": "date",							
-							"x-totvs": [
-								{
-									"product": "RM",
-									"available": true,
-									"required": true,
-									"field": "TCCOTACAO.DATLIMRESPTA",
-									"type": "date",									
-									"note": "Status da cotação"
-								}
-							]
-						},
-						"DeliveryDate": {
-							"description": "Data de Entrega",
-							"type": "date",							
-							"x-totvs": [
-								{
-									"product": "RM",
-									"available": true,
-									"required": true,
-									"field": "TCCOTACAO.DATENTREGA",
-									"type": "date",									
-									"note": "Data de Entrega"
-								}
-							]
-						},
-						"BuyerCode": {
-							"description": "Código do comprador",
-							"type": "string",							
-							"x-totvs": [
-								{
-									"product": "RM",
-									"available": true,
-									"required": true,
-									"field": "TCCOTACAO.CODCOMPRADOR",
-									"type": "string",									
-									"note": "Código do comprador"
-								}
-							]
-						}
-					}					
-				}
+				}				
 			}
+		},
+		"QuotationItemType": {
+			"type": "object",
+			"properties": {
+				"_expandables": {
+					"type": "array",
+					"description": "Expandable property/field list",
+					"items": {
+						"type": "string"
+					}
+				},
+				"CompanyId": {
+					"description": "Código da Empresa",
+					"type": "string",
+					"x-totvs": [								
+						{
+							"product": "RM",
+							"field": "TCCOTACAO.CODCOLIGADA",
+							"required": true,
+							"type": "integer",									
+							"note": "Código da coligada",
+							"available": true
+						}
+					]
+				},
+				"QuotationCode": {
+					"description": "Código da cotação",
+					"type": "string",
+					"x-totvs": [
+						{
+							"product": "RM",
+							"field": "TCCOTACAO.CODCOTACAO",
+							"required": true,
+							"type": "string",									
+							"note": "Código da cotação",
+							"available": true
+						}
+					]
+				},
+				"QuotationDate": {
+					"description": "Data da cotação",
+					"type": "date",
+					"x-totvs": [
+						{
+							"product": "RM",
+							"field": "TCCOTACAO.DATCOTACAO",
+							"required": true,
+							"type": "date",									
+							"note": "Data da cotacao",
+							"available": true
+						}
+					]
+				},
+				"QuotationStatus": {
+					"description": "Status da cotação",
+					"type": "string",							
+					"x-totvs": [
+						{
+							"product": "RM",
+							"available": true,
+							"required": true,
+							"field": "TCCOTACAO.STSCOTACAO",
+							"type": "string",									
+							"note": "Status da cotação"
+						}
+					]
+				},
+				"DeadlineDate": {
+					"description": "Data Limite de resposta da cotação",
+					"type": "date",							
+					"x-totvs": [
+						{
+							"product": "RM",
+							"available": true,
+							"required": true,
+							"field": "TCCOTACAO.DATLIMRESPTA",
+							"type": "date",									
+							"note": "Status da cotação"
+						}
+					]
+				},
+				"DeliveryDate": {
+					"description": "Data de Entrega",
+					"type": "date",							
+					"x-totvs": [
+						{
+							"product": "RM",
+							"available": true,
+							"required": true,
+							"field": "TCCOTACAO.DATENTREGA",
+							"type": "date",									
+							"note": "Data de Entrega"
+						}
+					]
+				},
+				"BuyerCode": {
+					"description": "Código do comprador",
+					"type": "string",							
+					"x-totvs": [
+						{
+							"product": "RM",
+							"available": true,
+							"required": true,
+							"field": "TCCOTACAO.CODCOMPRADOR",
+							"type": "string",									
+							"note": "Código do comprador"
+						}
+					]
+				}
+			}					
 		}
 	}
 }
