@@ -536,9 +536,9 @@
 				},
 				"BudgetItemList": {
 					"type": "array",					
-					"description": "Lista de itens de orçamento da cotação",					
+					"description": "Lista de orçamentos da cotação",					
 					"items": {
-						"$ref": "#/definitions/BudgetItemType",
+						"$ref": "#/definitions/BudgetType",
 						"type": "object"
 					}					
 				}
@@ -553,631 +553,631 @@
 					"items": {
 						"type": "string"
 					}
-				}
-			},
-			"CompanyId": {
-				"description": "Código da Empresa",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [								
-					{
-						"product": "RM",
-						"field": "TCITMORCAMENTO.CODCOLIGADA",
-						"required": true,
-						"type": "integer",									
-						"note": "Código da coligada",
-						"available": true
-					}
-				]
-			},
-			"QuotationCode": {
-				"description": "Código da cotação",
-				"type": "string",
-				"example": "2019.000001",
-				"x-totvs": [
-					{
-						"product": "RM",
-						"field": "TCITMORCAMENTO.CODCOTACAO",
-						"required": true,
-						"type": "string",									
-						"note": "Código da cotação",
-						"available": true
-					}
-				]
-			},
-			"VendorCompanyId": {
-				"description": "Código da Empresa do Fornecedor ",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"available": true,
-						"required": true,
-						"note": "Código da empresa",
-						"field": "TCITMORCAMENTO.CODCOLCFO",
-						"type": "integer"
-					}
-				]
-			},
-			"VendorCode": {
-				"description": "Código do Fornecedor",
-				"type": "string",
-				"example": "F0001",
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Código do Fornecedor",
-						"field": "TCITMORCAMENTO.CODCFO",
-						"type": "string",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"ProductId": {
-				"description": "Identificador do produto",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Identificador do produto",
-						"field": "TCITMORCAMENTO.IDPRD",
-						"type": "integer",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"PurchaseRequestCompanyId": {
-				"description": "Código da coligada do movimento",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Código da coligada do movimento",
-						"field": "TCITMORCAMENTO.CODCOLMOV",
-						"type": "integer",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"PurchaseRequestId": {
-				"description": "Identificador da solicitação de compras",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Identificador da solicitação de compras",
-						"field": "TCITMORCAMENTO.IDMOV",
-						"type": "integer",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"PurchaseRequestItemOrder": {
-				"description": "Identificador do item da solicitação de compras",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Número sequencial do item da solicitação de compras",
-						"field": "TCITMORCAMENTO.NSEQITMMOV",
-						"type": "integer",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"EffectedQuantity": {
-				"description": "Quantidade efetivada",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Quantidade efetivada",
-						"field": "TCITMORCAMENTO.QTDEFETIVADA",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"QuotationValue": {
-				"description": "Valor da cotação",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Valor da cotação",
-						"field": "TCITMORCAMENTO.VALCOTACAO",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"NegotiatedValue": {
-				"description": "Valor Negociado",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Valor Negociado",
-						"field": "TCITMORCAMENTO.VALNEGOCIADO",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"MeasureUnitCode": {
-				"description": "Código da Unidade de medida",
-				"type": "string",
-				"example": "UN",
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Código da Unidade de medida",
-						"field": "TCITMORCAMENTO.CODUND",
-						"type": "string",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"TaxValue": {
-				"description": "Valor do tributo",
-				"type": "string",
-				"example": 15,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Valor do tributo",
-						"field": "TCITMORCAMENTO.VALTRB",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"ItemStatus": {
-				"description": "Status do item de orçamento",
-				"type": "string",
-				"example": "1",
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Status do item de orçamento",
-						"field": "TCITMORCAMENTO.STSITEM",
-						"type": "string",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"ReasonCode": {
-				"description": "Código do Motivo",
-				"type": "string",
-				"example": "Motivo",
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Código do Motivo",
-						"field": "TCITMORCAMENTO.CODMOTIVO",
-						"type": "string",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"Observation": {
-				"description": "Observação",
-				"type": "string",
-				"example": "Observação",
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Observação",
-						"field": "TCITMORCAMENTO.OBSERVACAO",
-						"type": "string",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"QuotationTotalValue": {
-				"description": "Valor total da cotação",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Valor total da cotação",
-						"field": "TCITMORCAMENTO.VALTOTCOTACAO",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"DiscountValue": {
-				"description": "Valor do desconto",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Valor do desconto",
-						"field": "TCITMORCAMENTO.DESCONTO",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"DiscountPercent": {
-				"description": "Percentual de desconto",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "percentual de desconto",
-						"field": "TCITMORCAMENTO.PERCDESCONTO",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"NegotiatedDiscountValue": {
-				"description": "Valor do desconto negociado",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Valor do desconto negociado",
-						"field": "TCITMORCAMENTO.DESCONTONEGOCIADO",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"NegotiatedDiscountPercent": {
-				"description": "Percentual do desconto negociado",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Percentual do desconto negociado",
-						"field": "TCITMORCAMENTO.PERCDESCONTONEGOCIADO",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"PaymentTermCode": {
-				"description": "Condição de pagamento",
-				"type": "string",
-				"example": "001",
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Condição de pagamento",
-						"field": "TCITMORCAMENTO.CODCPG",
-						"type": "string",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"DeliveryDate": {
-				"description": "Data de Entrega",
-				"type": "string",	
-				"example": "20/09/2019",
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Data de Entrega",
-						"field": "TCITMORCAMENTO.DATAENTREGA",
-						"type": "date",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"ExpenseValue": {
-				"description": "Valor de Despesa",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Valor de Despesa",
-						"field": "TCITMORCAMENTO.DESPESA",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"NegotiatedPaymentTermCode": {
-				"description": "Condição de pagamento negociada",
-				"type": "string",
-				"example": "001",
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Condição de pagamento negociada",
-						"field": "TCITMORCAMENTO.CODCPGNEGOCIADA",
-						"type": "string",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"BudgetedItemExpenseValue": {
-				"description": "Valor de despesa orçada no item",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Valor de despesa orçada no item",
-						"field": "TCITMORCAMENTO.VALORDESPITMORC",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"NegotiatedItemExpenseValue": {
-				"description": "Valor de despesa negociada no item",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Valor de despesa negociada no item",
-						"field": "TCITMORCAMENTO.VALORDESPITMNEG",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"NegotiatedItemExpensePercent": {
-				"description": "Percentual de despesa negociada no item",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Percentual de despesa negociada no item",
-						"field": "TCITMORCAMENTO.PERCDESPITMNEG",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"DeliveryTime": {
-				"description": "Prazo de entrega",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Prazo de entrega",
-						"field": "TCITMORCAMENTO.PRAZOENTREGA",
-						"type": "integer",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"BudgetedItemICMSPercent": {
-				"description": "Percentual de ICMS Orçado no item ",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Percentual de ICMS Orçado no item",
-						"field": "TCITMORCAMENTO.PERCICMSITMORC",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"ReasonDescription": {
-				"description": " Detalhe do motivo (descrição do motivo)",
-				"type": "string",
-				"example": "Detalhes do motivo",
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": " Detalhe do motivo (descrição do motivo)",
-						"field": "TCITMORCAMENTO.DETMOTIVO",
-						"type": "string",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"NegotiatedTotalValue": {
-				"description": "Valor total negociado da cotação",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Valor total negociado da cotação",
-						"field": "TCITMORCAMENTO.VALTOTCOTACAONEG",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"ICMSSTValue": {
-				"description": "Valor do ICMS ST",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Valor do ICMS ST",
-						"field": "TCITMORCAMENTO.VALICMSST",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"Justification": {
-				"description": "Justificativa",
-				"type": "string",
-				"example": "Justificativa",
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Justificativa",
-						"field": "TCITMORCAMENTO.JUSTIFICATIVA",
-						"type": "string",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"ICMSSTMargin": {
-				"description": "Margem do ICMSST",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Margem do ICMSST",
-						"field": "TCITMORCAMENTO.MARGEMICMSST",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"BudgetedMeasureUnitCode": {
-				"description": "Código da Unidade Orçada",
-				"type": "string",
-				"example": "UN",
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Código da Unidade Orçada",
-						"field": "TCITMORCAMENTO.CODUNDORC",
-						"type": "string",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"NegotiatedMeasureUnitCode": {
-				"description": "Código da Unidade Negociada",
-				"type": "string",
-				"example": "UN",
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Código da Unidade Negociada",
-						"field": "TCITMORCAMENTO.CODUNDNEG",
-						"type": "string",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"BudgetedQuantity": {
-				"description": "Quantidade orçada",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Quantidade orçada",
-						"field": "TCITMORCAMENTO.QUANTIDADEORC",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"NegotiatedQuantity": {
-				"description": "Quantidade negociada",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Quantidade negociada",
-						"field": "TCITMORCAMENTO.QUANTIDADENEG",
-						"type": "decimal",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"NegotiatedBrandCompanyId": {
-				"description": "Código da coligada da marca negociada",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Código da coligada da marca negociada",
-						"field": "TCITMORCAMENTO.CODCOLMARCANEG",
-						"type": "integer",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"NegotiatedBrandId": {
-				"description": "Identificador da Marca Negociada",
-				"type": "string",
-				"example": 1,
-				"x-totvs": [
-					{
-						"product": "RM",
-						"note": "Identificador da Marca Negociada",
-						"field": "TCITMORCAMENTO.IDMARCANEG",
-						"type": "integer",
-						"required": true,
-						"available": true
-					}
-				]
-			},
-			"BudgetItemGRPList": {
-				"type": "array",					
-				"description": "Lista de composição de preços do item de orçamento",					
-				"items": {
-					"$ref": "#/definitions/BudgetItemGRPItemType",
-					"type": "object"
-				}					
-			}		
+				},
+				"CompanyId": {
+					"description": "Código da Empresa",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [								
+						{
+							"product": "RM",
+							"field": "TCITMORCAMENTO.CODCOLIGADA",
+							"required": true,
+							"type": "integer",									
+							"note": "Código da coligada",
+							"available": true
+						}
+					]
+				},
+				"QuotationCode": {
+					"description": "Código da cotação",
+					"type": "string",
+					"example": "2019.000001",
+					"x-totvs": [
+						{
+							"product": "RM",
+							"field": "TCITMORCAMENTO.CODCOTACAO",
+							"required": true,
+							"type": "string",									
+							"note": "Código da cotação",
+							"available": true
+						}
+					]
+				},
+				"VendorCompanyId": {
+					"description": "Código da Empresa do Fornecedor ",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"available": true,
+							"required": true,
+							"note": "Código da empresa",
+							"field": "TCITMORCAMENTO.CODCOLCFO",
+							"type": "integer"
+						}
+					]
+				},
+				"VendorCode": {
+					"description": "Código do Fornecedor",
+					"type": "string",
+					"example": "F0001",
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Código do Fornecedor",
+							"field": "TCITMORCAMENTO.CODCFO",
+							"type": "string",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"ProductId": {
+					"description": "Identificador do produto",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Identificador do produto",
+							"field": "TCITMORCAMENTO.IDPRD",
+							"type": "integer",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"PurchaseRequestCompanyId": {
+					"description": "Código da coligada do movimento",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Código da coligada do movimento",
+							"field": "TCITMORCAMENTO.CODCOLMOV",
+							"type": "integer",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"PurchaseRequestId": {
+					"description": "Identificador da solicitação de compras",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Identificador da solicitação de compras",
+							"field": "TCITMORCAMENTO.IDMOV",
+							"type": "integer",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"PurchaseRequestItemOrder": {
+					"description": "Identificador do item da solicitação de compras",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Número sequencial do item da solicitação de compras",
+							"field": "TCITMORCAMENTO.NSEQITMMOV",
+							"type": "integer",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"EffectedQuantity": {
+					"description": "Quantidade efetivada",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Quantidade efetivada",
+							"field": "TCITMORCAMENTO.QTDEFETIVADA",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"QuotationValue": {
+					"description": "Valor da cotação",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Valor da cotação",
+							"field": "TCITMORCAMENTO.VALCOTACAO",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"NegotiatedValue": {
+					"description": "Valor Negociado",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Valor Negociado",
+							"field": "TCITMORCAMENTO.VALNEGOCIADO",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"MeasureUnitCode": {
+					"description": "Código da Unidade de medida",
+					"type": "string",
+					"example": "UN",
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Código da Unidade de medida",
+							"field": "TCITMORCAMENTO.CODUND",
+							"type": "string",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"TaxValue": {
+					"description": "Valor do tributo",
+					"type": "string",
+					"example": 15,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Valor do tributo",
+							"field": "TCITMORCAMENTO.VALTRB",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"ItemStatus": {
+					"description": "Status do item de orçamento",
+					"type": "string",
+					"example": "1",
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Status do item de orçamento",
+							"field": "TCITMORCAMENTO.STSITEM",
+							"type": "string",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"ReasonCode": {
+					"description": "Código do Motivo",
+					"type": "string",
+					"example": "Motivo",
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Código do Motivo",
+							"field": "TCITMORCAMENTO.CODMOTIVO",
+							"type": "string",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"Observation": {
+					"description": "Observação",
+					"type": "string",
+					"example": "Observação",
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Observação",
+							"field": "TCITMORCAMENTO.OBSERVACAO",
+							"type": "string",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"QuotationTotalValue": {
+					"description": "Valor total da cotação",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Valor total da cotação",
+							"field": "TCITMORCAMENTO.VALTOTCOTACAO",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"DiscountValue": {
+					"description": "Valor do desconto",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Valor do desconto",
+							"field": "TCITMORCAMENTO.DESCONTO",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"DiscountPercent": {
+					"description": "Percentual de desconto",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "percentual de desconto",
+							"field": "TCITMORCAMENTO.PERCDESCONTO",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"NegotiatedDiscountValue": {
+					"description": "Valor do desconto negociado",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Valor do desconto negociado",
+							"field": "TCITMORCAMENTO.DESCONTONEGOCIADO",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"NegotiatedDiscountPercent": {
+					"description": "Percentual do desconto negociado",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Percentual do desconto negociado",
+							"field": "TCITMORCAMENTO.PERCDESCONTONEGOCIADO",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"PaymentTermCode": {
+					"description": "Condição de pagamento",
+					"type": "string",
+					"example": "001",
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Condição de pagamento",
+							"field": "TCITMORCAMENTO.CODCPG",
+							"type": "string",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"DeliveryDate": {
+					"description": "Data de Entrega",
+					"type": "string",	
+					"example": "20/09/2019",
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Data de Entrega",
+							"field": "TCITMORCAMENTO.DATAENTREGA",
+							"type": "date",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"ExpenseValue": {
+					"description": "Valor de Despesa",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Valor de Despesa",
+							"field": "TCITMORCAMENTO.DESPESA",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"NegotiatedPaymentTermCode": {
+					"description": "Condição de pagamento negociada",
+					"type": "string",
+					"example": "001",
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Condição de pagamento negociada",
+							"field": "TCITMORCAMENTO.CODCPGNEGOCIADA",
+							"type": "string",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"BudgetedItemExpenseValue": {
+					"description": "Valor de despesa orçada no item",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Valor de despesa orçada no item",
+							"field": "TCITMORCAMENTO.VALORDESPITMORC",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"NegotiatedItemExpenseValue": {
+					"description": "Valor de despesa negociada no item",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Valor de despesa negociada no item",
+							"field": "TCITMORCAMENTO.VALORDESPITMNEG",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"NegotiatedItemExpensePercent": {
+					"description": "Percentual de despesa negociada no item",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Percentual de despesa negociada no item",
+							"field": "TCITMORCAMENTO.PERCDESPITMNEG",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"DeliveryTime": {
+					"description": "Prazo de entrega",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Prazo de entrega",
+							"field": "TCITMORCAMENTO.PRAZOENTREGA",
+							"type": "integer",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"BudgetedItemICMSPercent": {
+					"description": "Percentual de ICMS Orçado no item ",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Percentual de ICMS Orçado no item",
+							"field": "TCITMORCAMENTO.PERCICMSITMORC",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"ReasonDescription": {
+					"description": " Detalhe do motivo (descrição do motivo)",
+					"type": "string",
+					"example": "Detalhes do motivo",
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": " Detalhe do motivo (descrição do motivo)",
+							"field": "TCITMORCAMENTO.DETMOTIVO",
+							"type": "string",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"NegotiatedTotalValue": {
+					"description": "Valor total negociado da cotação",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Valor total negociado da cotação",
+							"field": "TCITMORCAMENTO.VALTOTCOTACAONEG",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"ICMSSTValue": {
+					"description": "Valor do ICMS ST",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Valor do ICMS ST",
+							"field": "TCITMORCAMENTO.VALICMSST",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"Justification": {
+					"description": "Justificativa",
+					"type": "string",
+					"example": "Justificativa",
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Justificativa",
+							"field": "TCITMORCAMENTO.JUSTIFICATIVA",
+							"type": "string",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"ICMSSTMargin": {
+					"description": "Margem do ICMSST",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Margem do ICMSST",
+							"field": "TCITMORCAMENTO.MARGEMICMSST",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"BudgetedMeasureUnitCode": {
+					"description": "Código da Unidade Orçada",
+					"type": "string",
+					"example": "UN",
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Código da Unidade Orçada",
+							"field": "TCITMORCAMENTO.CODUNDORC",
+							"type": "string",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"NegotiatedMeasureUnitCode": {
+					"description": "Código da Unidade Negociada",
+					"type": "string",
+					"example": "UN",
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Código da Unidade Negociada",
+							"field": "TCITMORCAMENTO.CODUNDNEG",
+							"type": "string",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"BudgetedQuantity": {
+					"description": "Quantidade orçada",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Quantidade orçada",
+							"field": "TCITMORCAMENTO.QUANTIDADEORC",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"NegotiatedQuantity": {
+					"description": "Quantidade negociada",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Quantidade negociada",
+							"field": "TCITMORCAMENTO.QUANTIDADENEG",
+							"type": "decimal",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"NegotiatedBrandCompanyId": {
+					"description": "Código da coligada da marca negociada",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Código da coligada da marca negociada",
+							"field": "TCITMORCAMENTO.CODCOLMARCANEG",
+							"type": "integer",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"NegotiatedBrandId": {
+					"description": "Identificador da Marca Negociada",
+					"type": "string",
+					"example": 1,
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "Identificador da Marca Negociada",
+							"field": "TCITMORCAMENTO.IDMARCANEG",
+							"type": "integer",
+							"required": true,
+							"available": true
+						}
+					]
+				},
+				"BudgetItemGRPList": {
+					"type": "array",					
+					"description": "Lista de composição de preços do item de orçamento",					
+					"items": {
+						"$ref": "#/definitions/BudgetItemGRPItemType",
+						"type": "object"
+					}					
+				}	
+			}	
 		},
 		"BudgetItemGRPItemType": {
 			"type": "object",
