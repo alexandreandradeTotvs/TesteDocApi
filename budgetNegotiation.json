@@ -28,6 +28,19 @@
 		"BudgetNegotiation": {
 			"description": "Descreve uma cotação por fornecedor",
 			"properties": {
+				"InternalId": {
+					"description": "InternalId dos orçamentos por fornecedor",
+					"type": "string",
+					"example": "1|F001",
+					"x-totvs": [
+						{
+							"product": "RM",
+							"note": "TCORCAMENTO.CODCOLCFO | TCORCAMENTO.CODCFO",
+							"required": true,
+							"available": true
+						}
+					]
+				},
 				"VendorCompanyId": {
 					"description": "Código da Empresa do Fornecedor ",
 					"type": "string",
@@ -72,20 +85,7 @@
 							"type": "string"
 						}
 					]
-				},
-				"InternalId": {
-					"description": "InternalId dos orçamentos por fornecedor",
-					"type": "string",
-					"example": "1|F001",
-					"x-totvs": [
-						{
-							"product": "RM",
-							"note": "TCORCAMENTO.CODCOLCFO | TCORCAMENTO.CODCFO",
-							"required": true,
-							"available": true
-						}
-					]
-				},				
+				},								
 				"QuotationList": {
 					"type": "array",					
 					"description": "Lista de cotações do fornecedor",					

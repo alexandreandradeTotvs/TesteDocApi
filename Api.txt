@@ -25,7 +25,7 @@ info:
         contact: TribeCP.Squad.ComprasFaturamento
         description: 'Negociação de orçamento da cotação'
 paths:
-  '/budgetNegotiation/{BudgetNegotiationInternalId}':
+  '/{BudgetNegotiationInternalId}':
     get:
       tags:
         - Budget Negotiation
@@ -54,7 +54,7 @@ paths:
               schema:
                 $ref: 'https://raw.githubusercontent.com/totvs/ttalk-standard-message/master/jsonschema/apis/types/totvsApiTypesBase.json#/definitions/ErrorModel'
 
-  '/budgetNegotiation/{BudgetNegotiationInternalId}/negotiations/{NegotiationInternalId}':    
+  '/negotiations/{NegotiationInternalId}':    
     put:
       tags:
         - Negotiations
@@ -68,7 +68,6 @@ paths:
             note: Este verbo esta disponível com todos os parâmetros
             minimalVersion: 12.1.26
       parameters:
-        - $ref: '#/components/parameters/BudgetNegotiationInternalId'
         - $ref: '#/components/parameters/NegotiationInternalId'
         - $ref: 'https://raw.githubusercontent.com/totvs/ttalk-standard-message/master/jsonschema/apis/types/totvsApiTypesBase.json#/parameters/Authorization'
       requestBody:
